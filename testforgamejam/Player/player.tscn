@@ -1,8 +1,12 @@
-[gd_scene format=3 uid="uid://dxslhr0483xe4"]
+[gd_scene load_steps=2 format=3 uid="uid://dxslhr0483xe4"]
+
+[ext_resource type="Texture2D" uid="uid://bu4dg3d0480wd" path="res://assets/player/plane.png" id="1_l8h54"]
 
 [node name="Player" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(457, 327)
+texture = ExtResource("1_l8h54")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
