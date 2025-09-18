@@ -1,14 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxslhr0483xe4"]
+[gd_scene load_steps=3 format=3 uid="uid://dxslhr0483xe4"]
 
+[ext_resource type="Script" path="res://Player/player.gd" id="1_37q35"]
 [ext_resource type="Texture2D" uid="uid://bmg28l64apltw" path="res://icon.svg" id="1_mhbb1"]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_37q35")
 
-[node name="PlayerBody" type="CharacterBody2D" parent="."]
-
-[node name="Temp_picture" type="Sprite2D" parent="PlayerBody"]
+[node name="Temp_picture" type="Sprite2D" parent="."]
 position = Vector2(537, 293)
 texture = ExtResource("1_mhbb1")
 
-[node name="Temp_body" type="CollisionPolygon2D" parent="PlayerBody"]
+[node name="Temp_body" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(472, 243, 476, 351, 596, 353, 596, 231, 485, 227)
