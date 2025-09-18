@@ -1,13 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwsfbn85btbk4"]
 
 [ext_resource type="PackedScene" uid="uid://dxslhr0483xe4" path="res://Player/player.tscn" id="1_dkfq3"]
-[ext_resource type="Script" uid="uid://dbhl2ke8etmag" path="res://main_screen.gd" id="1_wbm3f"]
 [ext_resource type="PackedScene" uid="uid://b1vgk01yj5i8v" path="res://Universe/universe.tscn" id="3_22y4c"]
 
+[sub_resource type="GDScript" id="GDScript_wbm3f"]
+script/source = "extends Node2D
+
+func _process(_delta: float) -> void:
+	$Player.look_at(Vector2.ZERO)
+	pass
+"
+
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_wbm3f")
+script = SubResource("GDScript_wbm3f")
 
 [node name="Player" parent="." instance=ExtResource("1_dkfq3")]
 position = Vector2(606, 335)
+speed = 400
+dash_speed = 1000
 
 [node name="Universe" parent="." instance=ExtResource("3_22y4c")]
