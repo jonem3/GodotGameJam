@@ -12,8 +12,31 @@ config_version=5
 
 config/name="Testforgamejam"
 run/main_scene="uid://bwsfbn85btbk4"
-config/features=PackedStringArray("4.5", "Mobile")
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[input]
+
+Move_left={
+"deadzone": 0.5,
+"events": []
+}
+Move_right={
+"deadzone": 0.5,
+"events": []
+}
+Jump={
+"deadzone": 0.5,
+"events": []
+}
+Primary_action_attack={
+"deadzone": 0.5,
+"events": []
+}
+Secondary_action_Dash={
+"deadzone": 0.5,
+"events": []
+}
 
 [rendering]
 

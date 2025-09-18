@@ -1,13 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://dxslhr0483xe4"]
 
-[ext_resource type="Texture2D" uid="uid://bu4dg3d0480wd" path="res://assets/player/plane.png" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://bmg28l64apltw" path="res://icon.svg" id="1_mhbb1"]
 
 [node name="Player" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(457, 327)
-texture = ExtResource("1_l8h54")
-
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(537, 293)
+texture = ExtResource("1_mhbb1")
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(472, 243, 476, 351, 596, 353, 596, 231, 485, 227)
