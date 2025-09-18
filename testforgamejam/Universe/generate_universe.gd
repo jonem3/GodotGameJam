@@ -8,7 +8,7 @@ extends Node2D
 
 @export var minFreeSpace = 40
 
-var planets: Array[Dictionary] = [];
+var planets: Array[Dictionary] = []
 var spawn_area: Rect2
 
 func _draw() -> void:
