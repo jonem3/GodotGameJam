@@ -6,17 +6,19 @@
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_37q35")
 
-[node name="Temp_picture" type="Sprite2D" parent="."]
-position = Vector2(0.200012, -2.20001)
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-0.2000022, 1.8000131)
+scale = Vector2(0.31562498, 0.31562498)
 texture = ExtResource("1_mhbb1")
 
-[node name="Temp_body" type="CollisionPolygon2D" parent="."]
-position = Vector2(-536.8, -295.2)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-189, -102)
+scale = Vector2(0.35483855, 0.35483858)
 polygon = PackedVector2Array(472, 243, 476, 351, 596, 353, 596, 231, 485, 227)
-
-[node name="Timer_dash" type="Timer" parent="."]
-one_shot = true
 
 [node name="Timer_dash_effect" type="Timer" parent="."]
 wait_time = 0.2
+one_shot = true
+
+[node name="Timer_dash" type="Timer" parent="."]
 one_shot = true

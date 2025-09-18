@@ -8,3 +8,4 @@
 [node name="Universe" parent="." instance=ExtResource("2_wbm3f")]
 
 [node name="Player" parent="." instance=ExtResource("1_dkfq3")]
+position = Vector2(606, 335)
