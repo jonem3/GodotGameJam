@@ -9,12 +9,14 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	get_input()
+	#print("moving")
+
 	player_dash()
 	move_and_slide()
-	print(global_position.direction_to(get_global_mouse_position()))
-	print(dash_dir)
+	#print(global_position.direction_to(get_global_mouse_position()))
+	#print(dash_dir)
 
 
 func get_input() -> void:
@@ -26,7 +28,7 @@ func get_input() -> void:
 func player_dash() -> void:
 	
 	if Input.is_action_just_pressed("Secondary_action_Dash") and can_dash:
-		print("dash")
+		#print("dash")
 		dash_dir=global_position.direction_to(get_global_mouse_position())
 		$Timer_dash.start()
 		$Timer_dash_effect.start()
