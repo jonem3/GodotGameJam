@@ -7,8 +7,16 @@
 script = ExtResource("1_37q35")
 
 [node name="Temp_picture" type="Sprite2D" parent="."]
-position = Vector2(537, 293)
+position = Vector2(0.200012, -2.20001)
 texture = ExtResource("1_mhbb1")
 
 [node name="Temp_body" type="CollisionPolygon2D" parent="."]
+position = Vector2(-536.8, -295.2)
 polygon = PackedVector2Array(472, 243, 476, 351, 596, 353, 596, 231, 485, 227)
+
+[node name="Timer_dash" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer_dash_effect" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
