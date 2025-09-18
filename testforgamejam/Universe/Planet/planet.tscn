@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci21d48n6w5i5"]
+
+[ext_resource type="Texture2D" uid="uid://bb63j5ek17pr7" path="res://Universe/Planet/Assets/circle.svg" id="1_jyxqk"]
+
+[node name="Planet" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(270, 204)
+scale = Vector2(0.448, 0.448)
+texture = ExtResource("1_jyxqk")
