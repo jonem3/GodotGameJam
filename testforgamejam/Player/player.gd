@@ -25,7 +25,7 @@ func get_input() -> void:
 
 func player_dash() -> void:
 	
-	if Input.is_action_just_pressed("Secondary_action_Dash") and can_dash==true:
+	if Input.is_action_just_pressed("Secondary_action_Dash") and can_dash:
 		print("dash")
 		dash_dir=global_position.direction_to(get_global_mouse_position())
 		$Timer_dash.start()
