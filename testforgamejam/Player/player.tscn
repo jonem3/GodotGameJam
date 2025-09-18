@@ -4,11 +4,11 @@
 
 [node name="Player" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="PlayerBody" type="CharacterBody2D" parent="."]
 
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Temp_picture" type="Sprite2D" parent="PlayerBody"]
 position = Vector2(537, 293)
 texture = ExtResource("1_mhbb1")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+[node name="Temp_body" type="CollisionPolygon2D" parent="PlayerBody"]
 polygon = PackedVector2Array(472, 243, 476, 351, 596, 353, 596, 231, 485, 227)
