@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://iqpwkxgkkqb2"]
+
+[ext_resource type="Shader" uid="uid://b1ro2ilvs3iei" path="res://Boss/wing/wing_end.gdshader" id="1_xqf7k"]
+[ext_resource type="Texture2D" uid="uid://dvcu4wd2yl2g8" path="res://Boss/wing/Wing-End.png" id="2_xqf7k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yyks0"]
+shader = ExtResource("1_xqf7k")
+shader_parameter/origin = Color(0.21176471, 0.23921569, 0.32156864, 1)
+shader_parameter/new = Color(0.16202268, 0.8673791, 0.9643423, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w680m"]
+atlas = ExtResource("2_xqf7k")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yyks0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w680m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Wing_part" type="Node2D"]
+
+[node name="Wing_segement_location" type="Marker2D" parent="."]
+position = Vector2(-21, 7)
+
+[node name="Icon" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_yyks0")
+position = Vector2(-11, -2.0000005)
+rotation = -0.45029494
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_yyks0")
