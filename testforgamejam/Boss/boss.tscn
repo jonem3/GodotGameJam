@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://crp7n627govc6"]
 
 [node name="Boss" type="Node2D"]
+
+[node name="Boss_eye" type="Node2D" parent="."]
