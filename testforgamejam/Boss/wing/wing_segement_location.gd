@@ -20,7 +20,7 @@ func _ready()-> void:
 	#adding end wing
 	var wingsceneend = wing_end_scene.instantiate()
 	add_child(wingsceneend)
-	print(len(get_children()))
+	#print(len(get_children()))
 	move_to_end(numb_of_segments)
 		
 func add_wing():
