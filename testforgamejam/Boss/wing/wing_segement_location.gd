@@ -2,7 +2,7 @@ extends Node2D
 var wing_segment_scene = preload("res://Boss/wing/wing_part.tscn")
 var wing_end_scene = preload("res://Boss/wing/wing_end.tscn")
 var chance_of_another_wing=0.5
-var numb_of_segments=20 #this includes the end segment
+var numb_of_segments=10 #this includes the end segment
 var t=0
 
 func _ready()-> void:
@@ -28,8 +28,8 @@ func _process(delta: float) -> void:
 	var wings=len(get_children())
 
 	for i in range(2,wings):
-		get_child(i).rotation=(-sin((i*0.11)+t))
-		get_child(i).position.x+=20*-sin((i*0.11)+t)
+		get_child(i).rotation=(sin((i*0.2)+t)*0.8)
+		#get_child(i).look_at(get_child(i-1).global_position)
 		move_to_end(i)
 		pass
 	pass
