@@ -12,6 +12,6 @@ shader_parameter/new = Color(0.9098039, 0.23529412, 0.09803922, 1)
 
 [node name="Icon" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_0sxyl")
-position = Vector2(-8, 3.2311743e-27)
-scale = Vector2(0.159375, 0.084375)
+position = Vector2(-5.999999, 9.536743e-07)
+scale = Vector2(0.43124995, 0.2283088)
 texture = ExtResource("2_dc6ox")

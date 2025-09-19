@@ -18,22 +18,22 @@ script = ExtResource("1_4cnrr")
 position = Vector2(-25, 30)
 
 [node name="wing2" type="Marker2D" parent="Boss_wings"]
-position = Vector2(32, -28)
+position = Vector2(30, -35)
 
 [node name="wing3" type="Marker2D" parent="Boss_wings"]
-position = Vector2(-33, -1)
+position = Vector2(-43, 1)
 
 [node name="wing4" type="Marker2D" parent="Boss_wings"]
-position = Vector2(33, 0)
+position = Vector2(39, 0)
 
 [node name="wing5" type="Marker2D" parent="Boss_wings"]
-position = Vector2(-32, -27)
+position = Vector2(-32, -37)
 
 [node name="wing6" type="Marker2D" parent="Boss_wings"]
-position = Vector2(26, 29)
+position = Vector2(30, 32)
 
 [node name="Icon" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_mrrbl")
-position = Vector2(-2.861023e-06, -2.3841858e-07)
+position = Vector2(-0.9999995, -2)
 scale = Vector2(0.525, 0.5367647)
 texture = ExtResource("2_4cnrr")
