@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://d0ke5dwc55xot"]
+[gd_scene load_steps=4 format=3 uid="uid://d0ke5dwc55xot"]
+
+[ext_resource type="Shader" uid="uid://b1ro2ilvs3iei" path="res://Boss/wing/wing_end.gdshader" id="1_vdpd1"]
+[ext_resource type="Texture2D" uid="uid://bmg28l64apltw" path="res://icon.svg" id="2_dc6ox"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0sxyl"]
+shader = ExtResource("1_vdpd1")
+shader_parameter/origin = Color(0.21176471, 0.23921569, 0.32156864, 1)
+shader_parameter/new = Color(0.9098039, 0.23529412, 0.09803922, 1)
 
 [node name="WingRoute" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_0sxyl")
+position = Vector2(-8, 3.2311743e-27)
+scale = Vector2(0.159375, 0.084375)
+texture = ExtResource("2_dc6ox")
