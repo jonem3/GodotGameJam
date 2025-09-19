@@ -8,7 +8,6 @@ func _ready() -> void:
 		var wingscene = wing_route.instantiate()
 		#set the wing to see if it is right or left of the main eye and transform as needed
 		rightorleftofeye(wing)
-		print(wing)
 		#adds in a wing at each of the point
 		wing.add_child(wingscene)
 		pass

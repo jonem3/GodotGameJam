@@ -10,8 +10,11 @@ shader_parameter/new = Color(0.16202268, 0.8673791, 0.9643423, 1)
 
 [node name="Wing_part" type="Node2D"]
 
+[node name="Wing_segement_location" type="Marker2D" parent="."]
+position = Vector2(-19, 0)
+
 [node name="Icon" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_yyks0")
-position = Vector2(-5.999999, 3.85186e-34)
+position = Vector2(-8.000001, 0)
 scale = Vector2(0.159375, 0.084375)
 texture = ExtResource("2_w680m")

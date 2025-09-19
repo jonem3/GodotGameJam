@@ -15,3 +15,5 @@ material = SubResource("ShaderMaterial_1hmtw")
 position = Vector2(2.9999998, 2.7105054e-20)
 scale = Vector2(0.159375, 0.084375)
 texture = ExtResource("2_cg2pr")
+
+[node name="next_wing_location" type="Marker2D" parent="."]
