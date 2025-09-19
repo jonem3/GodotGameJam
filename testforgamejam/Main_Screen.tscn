@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwsfbn85btbk4"]
+[gd_scene load_steps=5 format=3 uid="uid://bwsfbn85btbk4"]
 
 [ext_resource type="PackedScene" uid="uid://dxslhr0483xe4" path="res://Player/player.tscn" id="1_dkfq3"]
 [ext_resource type="PackedScene" uid="uid://b1vgk01yj5i8v" path="res://Universe/universe.tscn" id="3_22y4c"]
+[ext_resource type="PackedScene" uid="uid://crp7n627govc6" path="res://Boss/boss.tscn" id="3_l0b2r"]
 
 [sub_resource type="GDScript" id="GDScript_wbm3f"]
 script/source = "extends Node2D
 
 func _process(_delta: float) -> void:
-	$Player.look_at(Vector2.ZERO)
+	$Player.look_at($Boss.global_position)
 	pass
 "
 
@@ -24,3 +25,6 @@ ignore_rotation = false
 position_smoothing_enabled = true
 
 [node name="Universe" parent="." instance=ExtResource("3_22y4c")]
+
+[node name="Boss" parent="." instance=ExtResource("3_l0b2r")]
+position = Vector2(529, 304)

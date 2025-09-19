@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://crp7n627govc6"]
+[gd_scene load_steps=5 format=3 uid="uid://crp7n627govc6"]
 
+[ext_resource type="Script" uid="uid://cxr0c06g8s7su" path="res://Boss/boss_wings.gd" id="1_4cnrr"]
 [ext_resource type="Shader" uid="uid://b1ro2ilvs3iei" path="res://Boss/wing/wing_end.gdshader" id="1_t20dt"]
 [ext_resource type="Texture2D" uid="uid://bmg28l64apltw" path="res://icon.svg" id="2_4cnrr"]
 
@@ -10,9 +11,28 @@ shader_parameter/new = Color(0.49411765, 1, 0.5137255, 1)
 
 [node name="Boss" type="Node2D"]
 
-[node name="Boss_eye" type="Node2D" parent="."]
+[node name="Boss_wings" type="Node2D" parent="."]
+script = ExtResource("1_4cnrr")
 
-[node name="Icon" type="Sprite2D" parent="Boss_eye"]
+[node name="wing1" type="Marker2D" parent="Boss_wings"]
+position = Vector2(-25, 30)
+
+[node name="wing2" type="Marker2D" parent="Boss_wings"]
+position = Vector2(32, -28)
+
+[node name="wing3" type="Marker2D" parent="Boss_wings"]
+position = Vector2(-33, -1)
+
+[node name="wing4" type="Marker2D" parent="Boss_wings"]
+position = Vector2(33, 0)
+
+[node name="wing5" type="Marker2D" parent="Boss_wings"]
+position = Vector2(-32, -27)
+
+[node name="wing6" type="Marker2D" parent="Boss_wings"]
+position = Vector2(26, 29)
+
+[node name="Icon" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_mrrbl")
 position = Vector2(-2.861023e-06, -2.3841858e-07)
 scale = Vector2(0.525, 0.5367647)
