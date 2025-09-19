@@ -3,6 +3,7 @@ var wing_segment_scene = preload("res://Boss/wing/wing_part.tscn")
 var wing_end_scene = preload("res://Boss/wing/wing_end.tscn")
 var chance_of_another_wing=0.5
 var numb_of_segments=20 #this includes the end segment
+var t=0
 
 func _ready()-> void:
 	
@@ -22,7 +23,21 @@ func _ready()-> void:
 	add_child(wingsceneend)
 	#print(len(get_children()))
 	move_to_end(numb_of_segments)
-		
+	
+func _process(delta: float) -> void:
+	var wings=len(get_children())
+
+	for i in range(2,wings):
+		get_child(i).rotation=(-sin((i*0.11)+t))
+		get_child(i).position.x+=20*-sin((i*0.11)+t)
+		move_to_end(i)
+		pass
+	pass
+	t+=delta
+	if t>2*PI:
+		t=0
+
+	
 func add_wing():
 	#add a wing segment to the list
 	var wingscene = wing_segment_scene.instantiate()

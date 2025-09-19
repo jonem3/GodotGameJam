@@ -24,7 +24,7 @@ dash_speed = 1000
 ignore_rotation = false
 position_smoothing_enabled = true
 
-[node name="Universe" parent="." instance=ExtResource("3_22y4c")]
-
 [node name="Boss" parent="." instance=ExtResource("3_l0b2r")]
 position = Vector2(529, 304)
+
+[node name="Universe" parent="." instance=ExtResource("3_22y4c")]
