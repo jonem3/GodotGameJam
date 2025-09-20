@@ -3,10 +3,12 @@ extends Node2D
 @export var maxPlanetSize = 100
 @export var minPlanetSize = 50
 
-@export var minPlanets = 10
-@export var maxPlanets = 20
+@export var minPlanets = 1
+@export var maxPlanets = 1
 
 @export var minFreeSpace = 40
+
+@export var gravityMultiplier = 600
 
 var planets: Array[Dictionary] = []
 var spawn_area: Rect2
@@ -46,11 +48,12 @@ func _ready() -> void:
 					overlaps = true
 					break
 					
-		planets.append({"position": new_pos, "radius": new_radius})
+		planets.append({"position": new_pos, "radius": new_radius, "mass": (new_radius^2)*PI})
 		
 	for planet_data in planets:
 		var pos = planet_data.position
 		var rad = planet_data.radius
+		var mass = planet_data.mass
 		
 		var physics_body = StaticBody2D.new()
 		add_child(physics_body)
@@ -58,11 +61,21 @@ func _ready() -> void:
 		
 		var collision_shape = CollisionShape2D.new()
 		physics_body.add_child(collision_shape)
+		collision_shape.shape = CircleShape2D.new()
+		collision_shape.shape.radius = rad
 		
-		var circle_shape = CircleShape2D.new()
-		circle_shape.radius = rad
-		collision_shape.shape = circle_shape
-	
+		var gravity_area = Area2D.new()
+		physics_body.add_child(gravity_area)
+		
+		gravity_area.gravity_point = true
+		gravity_area.gravity_point_center = Vector2.ZERO
+		gravity_area.gravity = mass * gravityMultiplier
+		gravity_area.SPACE_OVERRIDE_REPLACE
+			
+		var gravity_range_shape = CollisionShape2D.new()
+		gravity_range_shape.shape = CircleShape2D.new()
+		gravity_range_shape.shape.radius = rad * 2.0 
+		gravity_area.add_child(gravity_range_shape)
 		
 		
 	queue_redraw()
